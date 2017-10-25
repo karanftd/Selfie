@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N1x-vg-4oW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Selfie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v1R-ZL-bHx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Photo area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b60-sU-FkU">
+                                <frame key="frameInset" minX="225" minY="289" width="151" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="G5r-gR-KcY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1L-1N-OoV">
+                                <frame key="frameInset" minY="64" width="600" height="450"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5tB-FU-938" userLabel="Options View">
+                                <frame key="frameInset" minY="514" width="600" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk3-7l-1wp">
+                                        <frame key="frameInset" minY="18" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Hco-6n-6nG"/>
+                                        </constraints>
+                                        <state key="normal" title="Take photo">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="photobtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8c4-we-Dlc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95564931630000005" green="0.95562070610000005" blue="0.95563691849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="2NW-A2-SUh"/>
+                                    <constraint firstAttribute="bottom" secondItem="kk3-7l-1wp" secondAttribute="bottom" constant="18" id="Zw5-mj-ywZ"/>
+                                    <constraint firstItem="kk3-7l-1wp" firstAttribute="leading" secondItem="5tB-FU-938" secondAttribute="leading" id="ems-ET-nFy"/>
+                                    <constraint firstItem="kk3-7l-1wp" firstAttribute="top" secondItem="5tB-FU-938" secondAttribute="top" constant="18" id="ffM-Vg-VeQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="b60-sU-FkU" secondAttribute="centerX" id="47R-Kl-dHe"/>
+                            <constraint firstItem="5tB-FU-938" firstAttribute="top" secondItem="t1L-1N-OoV" secondAttribute="bottom" id="CPn-ft-fkc"/>
+                            <constraint firstItem="5tB-FU-938" firstAttribute="leading" secondItem="v1R-ZL-bHx" secondAttribute="leading" id="GA4-de-ugr"/>
+                            <constraint firstItem="t1L-1N-OoV" firstAttribute="leading" secondItem="v1R-ZL-bHx" secondAttribute="leading" id="One-r3-ybw"/>
+                            <constraint firstAttribute="trailing" secondItem="t1L-1N-OoV" secondAttribute="trailing" id="Um4-0z-4jn"/>
+                            <constraint firstAttribute="centerY" secondItem="b60-sU-FkU" secondAttribute="centerY" id="VeZ-oy-apa"/>
+                            <constraint firstAttribute="trailing" secondItem="5tB-FU-938" secondAttribute="trailing" id="qVU-F9-Y6h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gOp-qy-Afz"/>
+                    <connections>
+                        <outlet property="photoView" destination="t1L-1N-OoV" id="piE-sV-KCV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="784"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5tV-bu-Lod">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N1x-vg-4oW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gAH-k9-xeG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JQ5-ry-4yu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfD-Tz-8Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="783.95802098950526"/>
+        </scene>
+    </scenes>
+</document>
